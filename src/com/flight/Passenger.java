@@ -13,6 +13,7 @@ public class Passenger {
             this.state = state;
         }
     }
+
     private Address address;
 
     private static class Contact {
@@ -24,6 +25,7 @@ public class Passenger {
             this.email = email;
         }
     }
+
     private Contact contact;
 
     static {
@@ -31,8 +33,8 @@ public class Passenger {
     }
 
     public Passenger(String addressStreet, String addressCity,
-                           String addressState, String contactName, String contactPhone,
-                           String contactEmail) {
+                     String addressState, String contactName, String contactPhone,
+                     String contactEmail) {
         this.id = ++idCounter;
         this.address = new Address(addressStreet, addressCity, addressState);
         this.contact = new Contact(contactName, contactPhone, contactEmail);
@@ -41,6 +43,7 @@ public class Passenger {
     public int getId() {
         return this.id;
     }
+
     public String getAddressDetails() {
         return address.street + ", " + address.city + ", " + address.state;
     }

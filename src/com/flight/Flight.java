@@ -1,6 +1,6 @@
 package com.flight;
 
-public class Flight  {
+public class Flight {
 
     private String flightNumber;
     private String airline;
@@ -58,10 +58,11 @@ public class Flight  {
     }
 
     boolean checkAvailability() {
-     return    this.noOfBookedSeats < this.capacity;
+        return this.noOfBookedSeats < this.capacity;
 
     }
-    void incrementBookingCounter(){
-            this.noOfBookedSeats = ++bookingIncrement;
-        }
+
+    void incrementBookingCounter() {
+        this.noOfBookedSeats = ++bookingIncrement;
+    }
 }

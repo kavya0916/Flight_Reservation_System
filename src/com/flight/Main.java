@@ -15,14 +15,15 @@ public class Main {
         RegularTicket reg = new RegularTicket("12RQ", "Bangalore", "Singapore",
                 fli, "05/02/2021 13:00:00", "05/02/2021 17:00:00", pas, "12A",
                 18000, true, "No");
-        TouristTicket tou = new TouristTicket("12TQ","Bangalore", "Singapore", fli,
+        TouristTicket tou = new TouristTicket("12TQ", "Bangalore", "Singapore", fli,
                 "05/02/2021 13:00:00", "05/02/2021 17:00:00", pas, "12B",
-                18000, true, "4","RAMA,2nd street","NO");
+                18000, true, "4", "RAMA,2nd street", "NO");
         printTicketDetails(reg);
         printTicketDetails(tou);
 
     }
-    public static void printTicketDetails(Ticket ticket){
+
+    public static void printTicketDetails(Ticket ticket) {
         System.out.println(ticket.getPnr());
     }
 

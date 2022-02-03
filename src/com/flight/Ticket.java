@@ -1,16 +1,16 @@
 package com.flight;
 
-abstract public class Ticket  {
-private String pnr;
-private String destinationFrom;
-private String departureTo;
-private Flight flight;
-private String departureDateTime;
-private String arriveDateTime;
-private Passenger passenger;
-private String seatNo;
-private float price;
-private boolean cancelled;
+abstract public class Ticket {
+    private String pnr;
+    private String destinationFrom;
+    private String departureTo;
+    private Flight flight;
+    private String departureDateTime;
+    private String arriveDateTime;
+    private Passenger passenger;
+    private String seatNo;
+    private float price;
+    private boolean cancelled;
 
     public Ticket(String pnr) {
         this.pnr = pnr;
@@ -98,7 +98,7 @@ private boolean cancelled;
 
     public Ticket(String pnr, String destinationFrom, String departureTo, Flight flight, String departureDateTime,
                   String arriveDateTime, Passenger passenger, String seatNo, float price, boolean cancelled) {
-super();
+        super();
         this.pnr = pnr;
         this.destinationFrom = destinationFrom;
         this.departureTo = departureTo;
@@ -112,26 +112,24 @@ super();
     }
 
 
-    String checkStatus(){
-    if(this.cancelled = cancelled){
-        return "Cancel";
-    }
-    else
-    {
-        return "confirmed";
-    }
+    String checkStatus() {
+        if (this.cancelled = cancelled) {
+            return "Cancel";
+        } else {
+            return "confirmed";
+        }
     }
 
-   // int getFlightDuration(){
+    // int getFlightDuration(){
 
-   // }
-    
-  //  void cancel(){
+    // }
 
-
-   // }
+    //  void cancel(){
 
 
-    }
+    // }
+
+
+}
 
 
