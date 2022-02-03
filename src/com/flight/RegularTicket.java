@@ -1,18 +1,38 @@
 package com.flight;
 
-public class RegularTicket extends Ticket{
-    String specialServices;
+public class RegularTicket extends Ticket {
 
-    public RegularTicket(String pnr, String destinationFrom, String departureTo, Flight flight, String departureDateTime, String arriveDateTime, Passenger passenger, String seatNo, float price, boolean cancelled) {
-        super(pnr, destinationFrom, departureTo, flight, departureDateTime, arriveDateTime, passenger, seatNo, price, cancelled);
+    private String specialServices;
+
+    public RegularTicket(String pnr, String destinationFrom, String departureTo, Flight flight,
+                         String departureDateTime, String arriveDateTime, Passenger passenger,
+                         String seatNo, float price, boolean cancelled,String specialServices) {
+        super(pnr, destinationFrom, departureTo, flight, departureDateTime, arriveDateTime, passenger,
+                seatNo, price, cancelled);
+        this.specialServices = specialServices;
+
     }
 
-    String checkSpecialServices(){
-    return null;
+    public RegularTicket(String pnr) {
+        super(pnr);
     }
-    void updateSpecialSErvices(String specialServices){
 
+
+    public String getSpecialServices() {
+        return specialServices;
     }
+
+    public void setSpecialServices(String specialServices) {
+        this.specialServices = specialServices;
+    }
+
+String checkSpecialServices(){
+    return this.specialServices;
+}
+public void updateSpecialServices(String specialServices) {
+     this.setSpecialServices(specialServices);
+}
+
 
 
 }

@@ -1,8 +1,8 @@
 package com.flight;
 
 public class Passenger {
+    private static int idCounter;
     private int id;
-
 
     private static class Address {
         String street, city, state;
@@ -26,10 +26,14 @@ public class Passenger {
     }
     private Contact contact;
 
+    static {
+        idCounter = 0;
+    }
 
     public Passenger(String addressStreet, String addressCity,
                            String addressState, String contactName, String contactPhone,
                            String contactEmail) {
+        this.id = ++idCounter;
         this.address = new Address(addressStreet, addressCity, addressState);
         this.contact = new Contact(contactName, contactPhone, contactEmail);
     }
@@ -44,7 +48,5 @@ public class Passenger {
     public String getContactDetails() {
         return contact.name + ", " + contact.phone + ", " + contact.email;
     }
-
-
 
 }
